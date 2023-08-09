@@ -4,7 +4,7 @@
 As a software engineer, Bahiru is a highly skilled professional who has graduated from AASTU with a degree in Software Engineering. With a passion for technology and a keen eye for detail, Bahiru specializes in building robust and innovative software solutions.
 
 
-![UI1](bahiru.jpg)
+![UI1](/bahiru.jpg)
 
 ## About Me
 
