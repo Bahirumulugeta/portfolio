@@ -5,7 +5,7 @@ export default function Head() {
       <meta name="description" content="Hello, I'm Bahiru Mulugeta, a passionate software engineer specializing in web development. I graduated  from Addis Ababa Science and Technology University with a Software Engineering." />
       <meta name="keywords" content="Bahiru Mulugeta, portfolio, Bahiru, full stack dev, nextjs portfolio, portfolio design, portfolio website, personal portfolio" />
       <meta property="og:site_name" content="Bahiru Mulugeta's Portfolio" />
-      <meta property="og:title" content="Portfolio | Bahiru Mulugeta - Full Stack Developer" />
+      <meta property="og:title" content="Bahiru Mulugeta - Full Stack Developer" />
       <meta property="og:description"
         content="Hello, I'm Bahiru Mulugeta, a passionate software engineer specializing in web development. I graduated  from Addis Ababa Science and Technology University with a Software Engineering." />
       <meta property="og:url" content="https://bahiru.vercel.app" />
@@ -15,10 +15,10 @@ export default function Head() {
       <meta name="language" content="English" />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content="https://bahiru.vercel.app" />
-      <meta name="application-name" content="Portfolio | Bahiru Mulugeta - Full Stack Developer" />
+      <meta name="application-name" content="Bahiru Mulugeta - Full Stack Developer" />
       <meta name="apple-mobile-web-app-title" content="Bahiru Mulugeta - Full Stack Developer" />
       <link rel="icon" href="/favicon.ico" />
-      <title>Portfolio | Bahiru Mulugeta - Full Stack Developer</title>
+      <title>Bahiru Mulugeta - Full Stack Developer</title>
     </>
   )
 }
