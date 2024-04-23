@@ -9,4 +9,3 @@ As a software engineer, Bahiru is a highly skilled professional who has graduate
 ## About Me
 
 Overall, Bahiru's journey as a software engineer is characterized by their expertise in web development, proficiency in Next.js and Tailwind CSS, and a commitment to delivering exceptional software solutions. Their portfolio stands as a testament to their technical prowess, attention to detail, and passion for creating impactful software applications.
-

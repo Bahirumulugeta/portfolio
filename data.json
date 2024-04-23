@@ -1,0 +1,190 @@
+{
+  "main": {
+    "name": "Bahiru Mulugeta",
+    "shortDesc": "I am flexible, committed, energetic, dynamic, and a hard worker. I thrive in collaborative environments and enjoy working with teams to tackle challenges and deliver successful projects.",
+    "titles": [
+      "Frontend Development",
+      "Backend Development",
+      "Telegram Bot Development"
+    ],
+    "heroImage": "https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg",
+    "techStackImages": [
+      "https://img.icons8.com/color/144/000000/material-ui.png",
+      "https://img.icons8.com/color/144/000000/html-5--v1.png",
+      "https://img.icons8.com/color/144/000000/redux.png",
+      "https://img.icons8.com/color/144/000000/chakra-ui.png"
+    ]
+  },
+  "about": {
+    "aboutImage": "https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg",
+    "aboutImageCaption": "< I build stuff 🚀/>",
+    "title": "Full Stack Developer",
+    "about": "I excels in building web applications (React, Vue, Next.js) with clean, maintainable code (TypeScript). Experienced in backend development (Node.js, Express, Nest.js) and databases (MySQL, PostgreSQL, MongoDB). Passionate about building efficient and user-friendly experiences (Tailwind CSS, Material UI). Eager to leverage Telegram bot development skills for your project's success. ",
+    "callUrl": "",
+    "resumeUrl": ""
+  },
+  "socials": [
+    {
+      "icon": "FaLinkedin",
+      "link": "https://www.linkedin.com/in/bahiru-mulugeta-60b40a194/"
+    },
+    {
+      "icon": "FaGithub",
+      "link": "https://github.com/Bahirumulugeta"
+    },
+    {
+      "icon": "FaInstagram",
+      "link": "https://twitter.com/bahiru_mulugeta"
+    },
+    {
+      "icon": "FaTwitter",
+      "link": "https://twitter.com/bahiru_mulugeta"
+    }
+  ],
+  "skills": [
+    {
+      "name": "JavaScript",
+      "image": "https://img.icons8.com/color/144/null/javascript--v1.png",
+      "category": "Frontend"
+    },
+    {
+      "name": "Firebase",
+      "image": "https://img.icons8.com/color/144/null/firebase.png",
+      "category": "Backend"
+    },
+    {
+      "name": "GitHub",
+      "image": "https://img.icons8.com/material-outlined/96/null/github.png",
+      "category": "Tools"
+    }
+  ],
+  "projects": [
+    {
+      "category": "Telegram Bot",
+      "projects": [
+        {
+          "name": "Awakilo",
+          "image": "https://res.cloudinary.com/dsvjljeyr/image/upload/v1713792137/portfolio/photo_2024-04-22_16-21-19_mbm7ix.jpg",
+          "techstack": "Telegraf, Node.js",
+          "link": "https://t.me/awakiloTelegramBot"
+        },
+        {
+          "name": "Bishangari Booking bot",
+          "image": "https://res.cloudinary.com/dsvjljeyr/image/upload/v1713778804/portfolio/photo_2022-03-04_11-37-55_porfrx.jpg",
+          "techstack": "Php",
+          "link": "https://t.me/bishangari_booking_bot"
+        }
+      ]
+    },
+    {
+      "category": "MEVN Stack",
+      "projects": [
+        {
+          "name": "Gebeta",
+          "image": "https://res.cloudinary.com/dsvjljeyr/image/upload/v1713792554/portfolio/gebeta_uzdi0n.png",
+          "techstack": "Vue.js, Vuetify, Node.js, Express.js"
+        },
+        {
+          "name": "Agape Trading PLC",
+          "image": "https://res.cloudinary.com/dsvjljeyr/image/upload/v1713792542/portfolio/agape_rmqmda.png",
+          "techstack": "Vue.js, Vuetify, Node.js, Express.js",
+          "link": "https://agapetradingplc.com"
+        }
+      ]
+    },
+    {
+      "category": "MERN Stack",
+      "projects": [
+        {
+          "name": "Awakilo",
+          "image": "https://res.cloudinary.com/dsvjljeyr/image/upload/v1713792656/portfolio/awakilo_zdifyi.png",
+          "techstack": "React.js, Tailwind Css, Node.js, Express.js",
+          "link": "https://awakilo.com"
+        },
+        {
+          "name": "EplusApp Commercial S.c",
+          "image": "https://res.cloudinary.com/dsvjljeyr/image/upload/v1713793287/portfolio/eplus_q7i8fq.png",
+          "techstack": "React.js, Tailwind Css, Node.js, Express.js",
+          "link": "https://eplusapp.et"
+        },
+        {
+          "name": "Taza House",
+          "image": "https://res.cloudinary.com/dsvjljeyr/image/upload/v1713793699/portfolio/tazahouse_gz3fqo.png",
+          "techstack": "Next.js, Tailwind Css, Typescript, Node.js, Express.js",
+          "link": "https://tazahouse.com"
+        }
+      ]
+    }
+  ],
+  "educations": [
+    {
+      "institute": "Addis Ababa Science and Technology University (AASTU)",
+      "degree": "Bachelor's degree",
+      "duration": "2017 - 2021",
+      "desc": ["Pursuing Software Engineering course"]
+    }
+  ],
+  "experiences": [
+    {
+      "company": "Relief business Network ",
+      "position": "Web Developer",
+      "duration": "Jul 2021 - Jan 2022",
+      "desc": [
+        "Designing, developing, debugging, testing, and maintaining web based apps.",
+        "Skills: Vue.js · Node.js · MongoDB · Express.js ·  REST APIs"
+      ]
+    },
+    {
+      "company": "Gebeta",
+      "position": "Web Developer",
+      "duration": "Apr 2022 - Mar 2023",
+      "desc": [
+        "Responsible for developing the system",
+        "Skills: Vue.js · Node.js · PostgreSQL · Express.js "
+      ]
+    },
+    {
+      "company": "Crossroads Tech Solutions",
+      "position": "Full-stack Developer",
+      "duration": "Feb 2022 - Jun 2023",
+      "desc": [
+        "Participating in the end-to-end development process of the company's project.",
+        "Creating endpoints (Api) for the front-end developers.",
+        "Responsible for helping front-end developers about connecting to endpoints made by the back-end developers.",
+        "Skills: React.js · Vue.js · PostgreSQL · Node.js · Vuex · Tailwind CSS · MongoDB · Redux.js · Express.js"
+      ]
+    },
+    {
+      "company": "Kemer Habesha",
+      "position": "Back-end Developer",
+      "duration": "Oct 2022 - Sep 2023",
+      "desc": [
+        "Responsible for creating an API",
+        "Writing server-side code with Node.js to handle requests and process data.",
+        "Designing and optimizing databases, writing SQL queries, and interacting with database systems like  PostgreSQL, or MongoDB",
+        "Skills: TypeScript · PostgreSQL · Node.js · MongoDB · Express.js"
+      ]
+    },
+    {
+      "company": "Kifiya Financial Technology PLC",
+      "position": "Senior Software Engineer",
+      "duration": "Jul 2023 - Jan 2024",
+      "desc": [
+        "Creating and building user friendly and interactive designs using React.js",
+        "Writing a clean and easily maintainable code",
+        "Skills:  React.js · TypeScript"
+      ]
+    },
+    {
+      "company": "ConDigital",
+      "position": "Software Engineer",
+      "duration": "Aug 2023 - present",
+      "desc": [
+        "Responsible for developing enterprise software.",
+        "Collaborating with other team meets and developing high-quality software.",
+        "Creating a high-quality and robust system",
+        "Skills: React.js · TypeScript · NestJS"
+      ]
+    }
+  ]
+}
