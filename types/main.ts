@@ -6,7 +6,7 @@ type skill = {
 type IProject = {
   name: string;
   image: string;
-  link: string;
+  link?: string;
   techstack: string;
 };
 type project = {
@@ -17,7 +17,6 @@ type project = {
 type experience = {
   company: string;
   position: string;
-  startDate: string;
   duration: string;
   desc: string[];
 };
@@ -46,7 +45,6 @@ type about = {
 };
 
 type social = {
-  name: string;
   icon: string;
   link: string;
 };
