@@ -12,6 +12,11 @@ module.exports = {
       //   poppins: ['var(--font-poppins)']
       // },
       colors: {
+        primary: {
+          main:'#1680A4',
+          hover:"#228BAC"
+        },
+        secondary: '#38c172',
         grey: {
           800: '#18141c',
           900: '#120f16'

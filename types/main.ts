@@ -1,7 +1,10 @@
-type skill = {
+type ISkill = {
   name: string;
   image: string;
+};
+type skill = {
   category: string;
+  skills: ISkill[];
 };
 type IProject = {
   name: string;
@@ -68,5 +71,6 @@ export type {
   experience,
   education,
   social,
-  IProject
+  IProject,
+  ISkill,
 };

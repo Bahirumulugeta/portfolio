@@ -11,7 +11,7 @@ const Socials = ({ socials }: { socials: social[] }) => {
             {socials.map((s: social) => {
             
                 return (
-                    <Link href={s.link} target="_blank" rel="noreferrer" key={s.icon} className="grid place-items-center p-3 hover:animate-bounce rounded-full bg-violet-700 text-white">
+                    <Link href={s.link} target="_blank" rel="noreferrer" key={s.icon} className="grid place-items-center p-3 hover:animate-bounce rounded-full bg-primary-hover text-white">
                         {
                             //@ts-ignore
                             React.createElement(Fa[`${s.icon}`])

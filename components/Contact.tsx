@@ -111,7 +111,7 @@ const Contact = () => {
             />
             <button
               disabled={loading}
-              className="px-4 py-2 bg-violet-600 hover:bg-violet-700 transition-colors text-white rounded-lg disabled:cursor-not-allowed self-end"
+              className="px-4 py-2 bg-primary-main hover:bg-primary-hover transition-colors text-white rounded-lg disabled:cursor-not-allowed self-end"
             >
               {loading ? (
                 <span className="flex items-center gap-2">

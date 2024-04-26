@@ -29,8 +29,8 @@ const Experience = ({ index, company, position, desc, institute, degree, duratio
       <div className="order-1 md:w-5/12"></div>
 
       <span className="z-20 flex items-center order-1 justify-center w-6 h-6 md:w-9 md:h-9 bg-violet-200 rounded-full ring-4 md:ring-8 ring-white dark:ring-grey-800 dark:bg-violet-900">
-        {company && <MdWork className="text-base md:text-xl text-violet-600 dark:text-violet-400" />}
-        {institute && <MdSchool className="text-base md:text-xl text-violet-600 dark:text-violet-400" />}
+        {company && <MdWork className="text-base md:text-xl text-primary-main dark:text-primary-hover" />}
+        {institute && <MdSchool className="text-base md:text-xl text-primary-main dark:text-primary-hover" />}
       </span>
 
       <motion.div

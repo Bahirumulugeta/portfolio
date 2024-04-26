@@ -3,11 +3,12 @@
     "name": "Bahiru Mulugeta",
     "shortDesc": "I am flexible, committed, energetic, dynamic, and a hard worker. I thrive in collaborative environments and enjoy working with teams to tackle challenges and deliver successful projects.",
     "titles": [
-      "Frontend Development",
-      "Backend Development",
+      "Software Engineer",
+      "Fullstack Developer",
+      "Tech Enthusiast",
       "Telegram Bot Development"
     ],
-    "heroImage": "https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg",
+    "heroImage": "/my-pic.png",
     "techStackImages": [
       "https://img.icons8.com/color/144/000000/material-ui.png",
       "https://img.icons8.com/color/144/000000/html-5--v1.png",
@@ -20,8 +21,8 @@
     "aboutImageCaption": "< I build stuff 🚀/>",
     "title": "Full Stack Developer",
     "about": "I excels in building web applications (React, Vue, Next.js) with clean, maintainable code (TypeScript). Experienced in backend development (Node.js, Express, Nest.js) and databases (MySQL, PostgreSQL, MongoDB). Passionate about building efficient and user-friendly experiences (Tailwind CSS, Material UI). Eager to leverage Telegram bot development skills for your project's success. ",
-    "callUrl": "",
-    "resumeUrl": ""
+    "callUrl": "tel:+251948750343",
+    "resumeUrl": "https://europa.eu/europass/eportfolio/api/eprofile/shared-profile/bahiru+mulugeta-mekonnen/f0389b3c-c458-4d36-9675-5d0d40614e1a?view=html"
   },
   "socials": [
     {
@@ -43,19 +44,111 @@
   ],
   "skills": [
     {
-      "name": "JavaScript",
-      "image": "https://img.icons8.com/color/144/null/javascript--v1.png",
-      "category": "Frontend"
+      "category": "Frontend",
+      "skills": [
+        {
+          "name": "JavaScript",
+          "image": "/frontend/JavaScript.webp"
+        },
+        {
+          "name": "React",
+          "image": "/frontend/React.webp"
+        },
+        {
+          "name": "TypeScript",
+          "image": "/frontend/TypeScript.webp"
+        },
+        {
+          "name": "Html",
+          "image": "/frontend/Html.webp"
+        },
+        {
+          "name": "NextJs",
+          "image": "/frontend/NextJS.svg"
+        },
+        {
+          "name": "CSS",
+          "image": "/frontend/css.webp"
+        },
+        {
+          "name": "Tailwind Css",
+          "image": "/frontend/Tailwind.webp"
+        },
+        {
+          "name": "MaterialUI",
+          "image": "/frontend/MaterialUI.webp"
+        },
+        {
+          "name": "Redux",
+          "image": "/frontend/Redux.webp"
+        }
+      ]
     },
     {
-      "name": "Firebase",
-      "image": "https://img.icons8.com/color/144/null/firebase.png",
-      "category": "Backend"
+      "category": "Backend",
+      "skills": [
+        {
+          "name": "NodeJs",
+          "image": "/backend/node.webp"
+        },
+        {
+          "name": "ExpressJs",
+          "image": "/backend/Express.webp"
+        },
+        {
+          "name": "NestJs",
+          "image": "/backend/nest.webp"
+        },
+        {
+          "name": "Redis",
+          "image": "/backend/redis.webp"
+        },
+        {
+          "name": "MySQL",
+          "image": "/backend/Mysql.webp"
+        },
+        {
+          "name": "PostgreSQL",
+          "image": "/backend/postgresql.webp"
+        },
+        {
+          "name": "Mongo DB",
+          "image": "/backend/MongoDB.webp"
+        }
+      ]
     },
     {
-      "name": "GitHub",
-      "image": "https://img.icons8.com/material-outlined/96/null/github.png",
-      "category": "Tools"
+      "category": "Others",
+      "skills": [
+        {
+          "name": "Github",
+          "image": "/others/Github.webp"
+        },
+        {
+          "name": "Git",
+          "image": "/others/Git.webp"
+        },
+        {
+          "name": "Jira",
+          "image": "/others/jira.webp"
+        },
+        {
+          "name": "AWS",
+          "image": "/others/Aws.webp"
+        },
+        {
+          "name": "Digital Ocean",
+          "image": "/others/DigitalOcean.webp"
+        },
+        {
+          "name": "Netlify",
+          "image": "/others/Netlify.webp"
+        },
+        {
+          "name": "Vercel",
+          "image": "/others/vercel.svg"
+        }
+      ]
     }
   ],
   "projects": [
@@ -64,13 +157,13 @@
       "projects": [
         {
           "name": "Awakilo",
-          "image": "https://res.cloudinary.com/dsvjljeyr/image/upload/v1713792137/portfolio/photo_2024-04-22_16-21-19_mbm7ix.jpg",
+          "image": "/bot.webp",
           "techstack": "Telegraf, Node.js",
           "link": "https://t.me/awakiloTelegramBot"
         },
         {
           "name": "Bishangari Booking bot",
-          "image": "https://res.cloudinary.com/dsvjljeyr/image/upload/v1713778804/portfolio/photo_2022-03-04_11-37-55_porfrx.jpg",
+          "image": "/bot.webp",
           "techstack": "Php",
           "link": "https://t.me/bishangari_booking_bot"
         }
@@ -89,6 +182,12 @@
           "image": "https://res.cloudinary.com/dsvjljeyr/image/upload/v1713792542/portfolio/agape_rmqmda.png",
           "techstack": "Vue.js, Vuetify, Node.js, Express.js",
           "link": "https://agapetradingplc.com"
+        },
+        {
+          "name": "Ashewa",
+          "image": "/ashewa.PNG",
+          "techstack": "Nuxt, Tailwind Css",
+          "link": "https://ashewa.com"
         }
       ]
     },
@@ -112,6 +211,12 @@
           "image": "https://res.cloudinary.com/dsvjljeyr/image/upload/v1713793699/portfolio/tazahouse_gz3fqo.png",
           "techstack": "Next.js, Tailwind Css, Typescript, Node.js, Express.js",
           "link": "https://tazahouse.com"
+        },
+        {
+          "name": "Aaron Habesha",
+          "image": "/aaronhabesha.PNG",
+          "techstack": "React.js, Tailwind Css, Node.js, Express.js",
+          "link": "https://aaronhabesh.com"
         }
       ]
     }
