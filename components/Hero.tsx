@@ -21,7 +21,7 @@ const Hero = ({ mainData }: HeroProps) => {
         theme === "dark" && "bg-grey-900"
       } relative min-h-screen w-full mx-auto overflow-hidden`}
     >
-      <div className="absolute -z-10 min-h-screen h-full w-full">
+      {/* <div className="absolute -z-10 min-h-screen h-full w-full">
         <Image
           src="/herobgc.jpg"
           layout="fill"
@@ -31,7 +31,7 @@ const Hero = ({ mainData }: HeroProps) => {
           quality={100}
           alt={""}
         />
-      </div>
+      </div> */}
 
       <div className="py-16 lg:py-48 flex flex-col-reverse lg:flex-row justify-around gap-10 lg:gap-0">
         <div className="flex flex-col gap-4 md:gap-6 text-left lg:w-1/2 2xl:w-1/3 mx-4 md:mx-6 xl:mx-0">
@@ -49,7 +49,7 @@ const Hero = ({ mainData }: HeroProps) => {
             I&apos;m {name}
           </h1>
           <div className="flex flex-row items-start md:items-center gap-1.5">
-            <h2 className="text-lg md:text-2xl">I am into</h2>
+            <h2 className="text-lg md:text-2xl">I am</h2>
             <Typewriter
               options={{
                 strings: titles,

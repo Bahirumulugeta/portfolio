@@ -6,9 +6,9 @@
       "Software Engineer",
       "Fullstack Developer",
       "Tech Enthusiast",
-      "Telegram Bot Development"
+      "Telegram Bot Developer"
     ],
-    "heroImage": "/my-pic.png",
+    "heroImage": "/cropped.jpg",
     "techStackImages": [
       "https://img.icons8.com/color/144/000000/material-ui.png",
       "https://img.icons8.com/color/144/000000/html-5--v1.png",
@@ -173,6 +173,12 @@
       "category": "MEVN Stack",
       "projects": [
         {
+          "name": "Ashewa",
+          "image": "/ashewa.PNG",
+          "techstack": "Nuxt, Tailwind Css",
+          "link": "https://ashewa.com"
+        },
+        {
           "name": "Gebeta",
           "image": "https://res.cloudinary.com/dsvjljeyr/image/upload/v1713792554/portfolio/gebeta_uzdi0n.png",
           "techstack": "Vue.js, Vuetify, Node.js, Express.js"
@@ -182,12 +188,6 @@
           "image": "https://res.cloudinary.com/dsvjljeyr/image/upload/v1713792542/portfolio/agape_rmqmda.png",
           "techstack": "Vue.js, Vuetify, Node.js, Express.js",
           "link": "https://agapetradingplc.com"
-        },
-        {
-          "name": "Ashewa",
-          "image": "/ashewa.PNG",
-          "techstack": "Nuxt, Tailwind Css",
-          "link": "https://ashewa.com"
         }
       ]
     },
@@ -195,16 +195,16 @@
       "category": "MERN Stack",
       "projects": [
         {
-          "name": "Awakilo",
-          "image": "https://res.cloudinary.com/dsvjljeyr/image/upload/v1713792656/portfolio/awakilo_zdifyi.png",
-          "techstack": "React.js, Tailwind Css, Node.js, Express.js",
-          "link": "https://awakilo.com"
+          "name": "Peoplelearn",
+          "image": "https://res.cloudinary.com/dsvjljeyr/image/upload/v1754591734/portfolio/Screenshot_2025-08-07_at_9.17.35_at_night_snz5pp.png",
+          "techstack": "Next.js, Tailwind Css, Node.js, Express.js, Typescript",
+          "link": "https://peoplelearn.io/"
         },
         {
-          "name": "EplusApp Commercial S.c",
-          "image": "https://res.cloudinary.com/dsvjljeyr/image/upload/v1713793287/portfolio/eplus_q7i8fq.png",
-          "techstack": "React.js, Tailwind Css, Node.js, Express.js",
-          "link": "https://eplusapp.et"
+          "name": "Hulu Sport",
+          "image": "https://res.cloudinary.com/dsvjljeyr/image/upload/v1754591783/portfolio/Screenshot_2025-08-07_at_9.21.06_at_night_ocn294.png",
+          "techstack": "React.js, Tailwind Css, Django",
+          "link": "https://hulusport.et/"
         },
         {
           "name": "Taza House",
@@ -212,6 +212,13 @@
           "techstack": "Next.js, Tailwind Css, Typescript, Node.js, Express.js",
           "link": "https://tazahouse.com"
         },
+        {
+          "name": "Awakilo",
+          "image": "https://res.cloudinary.com/dsvjljeyr/image/upload/v1713792656/portfolio/awakilo_zdifyi.png",
+          "techstack": "React.js, Tailwind Css, Node.js, Express.js",
+          "link": "https://awakilo.com"
+        },
+
         {
           "name": "Aaron Habesha",
           "image": "/aaronhabesha.PNG",
@@ -281,6 +288,17 @@
       ]
     },
     {
+      "company": "Ashewa Techbologies",
+      "position": "Full stack Developer",
+      "duration": "Dec 2023 - January 2025",
+      "desc": [
+        "Handled UI and API-related tasks for the e-commerce system (ashewa.com, internal system, seller platforms.",
+        "Worked as a backend developer for the Ashewa delivery system integrated with delivery app and driver platforms.",
+        "Creating a high-quality and robust system",
+        "Skills: React.js · TypeScript · NestJS"
+      ]
+    },
+    {
       "company": "ConDigital",
       "position": "Software Engineer",
       "duration": "Aug 2023 - present",
@@ -289,6 +307,16 @@
         "Collaborating with other team meets and developing high-quality software.",
         "Creating a high-quality and robust system",
         "Skills: React.js · TypeScript · NestJS"
+      ]
+    },
+    {
+      "company": "Convex Technologies",
+      "position": "Software Engineer",
+      "duration": "January 2025 - present",
+      "desc": [
+        "Working on an interactive sports betting platform",
+        "Designing and delivering a casino games for the Ethiopian market",
+        "Skills: React.js Tailwind css, Microservice, redis..."
       ]
     }
   ]
