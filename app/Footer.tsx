@@ -1,32 +1,39 @@
 import { social } from "@/types/main";
-import { useTheme } from "next-themes";
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import * as Fa from 'react-icons/fa';
+import * as Fa from "react-icons/fa";
 
-export default function Footer({ socials, name }: { socials: social[], name: string }) {
-
-    const { theme } = useTheme()
-
-    return (
-        <footer className="w-full bg-white dark:bg-grey-800 text-gray-500 dark:text-gray-300">
-
-            <div className="xl:max-w-6xl mx-auto md:mx-6 lg:mx-10 xl:mx-auto py-4 lg:py-6 flex flex-col-reverse md:flex-row gap-2 md:gap-0 justify-between items-center">
-                {/* Social Links */}
-                <div className="flex xl:hidden items-center gap-2">
-                    {socials.map((s: social, ) => (
-                        <Link href={s.link} target="_blank" rel="noreferrer" key={s.icon} className="grid place-items-center p-3 rounded-full text-lg hover:bg-gray-100 hover:dark:bg-grey-900 transition-colors">
-                            {
-                                // @ts-ignore
-                                React.createElement(Fa[`${s.icon}`])
-                            }
-                        </Link>
-                    ))}
-                </div>
-
-            </div>
-
-        </footer>
-    )
+export default function Footer({
+  socials,
+  name,
+}: {
+  socials: social[];
+  name: string;
+}) {
+  return (
+    <footer className="border-t border-slate-200 bg-white dark:border-white/10 dark:bg-ink">
+      <div className="container-page flex flex-col items-center justify-between gap-4 py-8 md:flex-row">
+        <p className="text-sm text-slate-600 dark:text-slate-300">
+          © {new Date().getFullYear()} {name}. Built with care.
+        </p>
+        <div className="flex items-center gap-2">
+          {socials.map((s: social) => (
+            <Link
+              href={s.link}
+              target="_blank"
+              rel="noreferrer"
+              key={s.icon}
+              aria-label={s.icon.replace("Fa", "")}
+              className="grid h-10 w-10 cursor-pointer place-items-center rounded-full text-slate-600 transition-colors duration-200 hover:text-primary focus-ring dark:text-slate-300"
+            >
+              {
+                // @ts-ignore
+                React.createElement(Fa[`${s.icon}`])
+              }
+            </Link>
+          ))}
+        </div>
+      </div>
+    </footer>
+  );
 }

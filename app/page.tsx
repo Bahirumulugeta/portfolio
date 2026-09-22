@@ -14,9 +14,9 @@ export default async function page() {
       {data ?
         <HomePage data={data} />
         :
-        <div className='h-screen w-screen flex flex-col items-center justify-center gap-5 text-primary-main fixed z-30 bg-gray-100 dark:bg-grey-900'>
-          <FaNodeJs size={100} className='animate-pulse' />
-          <p className='animate-pulse text-xl'>Loading...</p>
+        <div className='fixed z-30 flex h-screen w-screen flex-col items-center justify-center gap-5 bg-slate-50 text-primary dark:bg-ink'>
+          <FaNodeJs size={72} className='text-primary' />
+          <p className='text-lg text-slate-600 dark:text-slate-300'>Loading portfolio</p>
         </div>
       }
     </>

@@ -1,7 +1,7 @@
 {
   "main": {
     "name": "Bahiru Mulugeta",
-    "shortDesc": "I am flexible, committed, energetic, dynamic, and a hard worker. I thrive in collaborative environments and enjoy working with teams to tackle challenges and deliver successful projects.",
+    "shortDesc": "Senior fullstack engineer shipping production web apps, APIs, and Telegram products with clean TypeScript and reliable delivery.",
     "titles": [
       "Software Engineer",
       "Fullstack Developer",
@@ -20,7 +20,7 @@
     "aboutImage": "https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg",
     "aboutImageCaption": "< I build stuff 🚀/>",
     "title": "Full Stack Developer",
-    "about": "I excels in building web applications (React, Vue, Next.js) with clean, maintainable code (TypeScript). Experienced in backend development (Node.js, Express, Nest.js) and databases (MySQL, PostgreSQL, MongoDB). Passionate about building efficient and user-friendly experiences (Tailwind CSS, Material UI). Eager to leverage Telegram bot development skills for your project's success. ",
+    "about": "I build web applications with React, Vue, and Next.js using TypeScript for clean, maintainable code. On the backend I work with Node.js, Express, and NestJS across MySQL, PostgreSQL, and MongoDB. I care about fast, usable interfaces with Tailwind CSS and Material UI, and I also ship Telegram bots when a product needs an extra channel.",
     "callUrl": "tel:+251948750343",
     "resumeUrl": "https://europa.eu/europass/eportfolio/api/eprofile/shared-profile/bahiru+mulugeta-mekonnen/f0389b3c-c458-4d36-9675-5d0d40614e1a?view=html"
   },
@@ -288,7 +288,7 @@
       ]
     },
     {
-      "company": "Ashewa Techbologies",
+      "company": "Ashewa Technologies",
       "position": "Full stack Developer",
       "duration": "Dec 2023 - January 2025",
       "desc": [
@@ -304,7 +304,7 @@
       "duration": "Aug 2023 - present",
       "desc": [
         "Responsible for developing enterprise software.",
-        "Collaborating with other team meets and developing high-quality software.",
+        "Collaborating with other team members and developing high-quality software.",
         "Creating a high-quality and robust system",
         "Skills: React.js · TypeScript · NestJS"
       ]

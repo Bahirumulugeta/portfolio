@@ -1,62 +1,60 @@
 import { IProject } from "@/types/main";
 import Image from "next/image";
 import Link from "next/link";
-import { FaGithub, FaVideo } from "react-icons/fa";
 import { BiLinkExternal } from "react-icons/bi";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-const cardVariants = {
-  hidden: { y: 50, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: { duration: 0.6, ease: "easeInOut" },
-  },
-};
-
 const Project = ({ name, image, techstack, link }: IProject) => {
+  const shouldReduceMotion = useReducedMotion();
   const [ref, inView] = useInView({
-    threshold: 0.2,
+    threshold: 0.15,
     triggerOnce: true,
   });
 
   return (
-    <motion.div
+    <motion.article
       ref={ref}
-      variants={cardVariants}
-      initial="hidden"
-      animate={inView ? "visible" : "hidden"}
-      className="flex flex-col gap-2 bg-white dark:bg-grey-800 rounded-lg p-4"
+      initial={shouldReduceMotion ? false : { y: 18, opacity: 0 }}
+      animate={
+        inView || shouldReduceMotion
+          ? { y: 0, opacity: 1 }
+          : { y: 18, opacity: 0 }
+      }
+      transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+      className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white transition-colors duration-200 hover:border-primary dark:border-white/10 dark:bg-surface-dark"
     >
-      <div className="relative group rounded-lg bg-violet-50">
+      <div className="relative overflow-hidden bg-slate-100 dark:bg-ink">
         <Image
-          alt={name}
-          width={1000}
-          height={1000}
-          className="max-w-full h-48 max-h-full object-cover object-top rounded-lg"
+          alt={`${name} screenshot`}
+          width={1200}
+          height={750}
+          className="h-52 w-full object-cover object-top"
           src={image}
         />
         {link && (
-          <div className="absolute top-0 scale-x-0 group-hover:scale-100 transition-transform origin-left duration-200 ease-linear bg-gray-800 bg-opacity-60 w-full h-full rounded-lg flex items-center gap-4 justify-center">
+          <div className="absolute inset-0 flex items-end bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent p-4 opacity-100 md:opacity-0 md:transition-opacity md:duration-200 md:group-hover:opacity-100">
             <Link
               href={link}
               target="_blank"
-              className="bg-white text-black p-2 rounded-lg hover:bg-black hover:text-white transition-all"
+              rel="noreferrer"
+              className="inline-flex cursor-pointer items-center gap-2 rounded-lg bg-white px-3 py-2 text-sm font-semibold text-slate-900 transition-colors duration-200 hover:bg-primary hover:text-white focus-ring"
             >
-              <BiLinkExternal size={20} />
+              Visit live site
+              <BiLinkExternal size={16} />
             </Link>
           </div>
         )}
       </div>
-      <div className="my-2 flex flex-col gap-3">
-        <h3 className="text-xl font-medium">{name}</h3>
-        <p className="text-sm text-gray-400">
-          {" "}
-          <span className="font-medium">Tech Stack:</span> {techstack}
+      <div className="flex flex-1 flex-col gap-2 p-5">
+        <h3 className="font-heading text-xl font-semibold text-slate-900 dark:text-white">
+          {name}
+        </h3>
+        <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+          {techstack}
         </p>
       </div>
-    </motion.div>
+    </motion.article>
   );
 };
 

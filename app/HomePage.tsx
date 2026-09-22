@@ -18,13 +18,15 @@ const HomePage = ({ data }: Props) => {
     return (
         <>
             <Header logo={data.main.name} />
-            <Hero mainData={data.main} />
-            <Socials socials={data.socials} />
-            <About aboutData={data.about} name={data.main.name} />
-            <Skills skillData={data.skills} />
-            <Projects projectsData={data.projects} />
-            <Experiences experienceData={data.experiences} educationData={data.educations} />
-            <Contact />
+            <main>
+                <Hero mainData={data.main} resumeUrl={data.about.resumeUrl} />
+                <Socials socials={data.socials} />
+                <About aboutData={data.about} name={data.main.name} />
+                <Skills skillData={data.skills} />
+                <Projects projectsData={data.projects} />
+                <Experiences experienceData={data.experiences} educationData={data.educations} />
+                <Contact />
+            </main>
             <Footer socials={data.socials} name={data.main.name} />
         </>
     )
