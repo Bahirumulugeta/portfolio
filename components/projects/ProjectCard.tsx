@@ -5,12 +5,18 @@ import { BiLinkExternal } from "react-icons/bi";
 import { motion, useReducedMotion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-const Project = ({ name, image, techstack, link }: IProject) => {
+interface ProjectProps extends IProject {
+  featured?: boolean;
+  category?: string;
+}
+
+const Project = ({ name, image, techstack, link, featured, category }: ProjectProps) => {
   const shouldReduceMotion = useReducedMotion();
   const [ref, inView] = useInView({
-    threshold: 0.15,
+    threshold: 0.12,
     triggerOnce: true,
   });
+  const tags = techstack.split(",").map((item) => item.trim()).filter(Boolean);
 
   return (
     <motion.article
@@ -22,37 +28,51 @@ const Project = ({ name, image, techstack, link }: IProject) => {
           : { y: 18, opacity: 0 }
       }
       transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-      className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white transition-colors duration-200 hover:border-primary dark:border-white/10 dark:bg-surface-dark"
+      className={`group overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white dark:border-white/10 dark:bg-transparent ${
+        featured ? "md:col-span-2" : ""
+      }`}
     >
-      <div className="relative overflow-hidden bg-slate-100 dark:bg-ink">
+      <div className={`relative overflow-hidden bg-slate-100 dark:bg-black ${featured ? "h-72 md:h-80" : "h-52"}`}>
         <Image
           alt={`${name} screenshot`}
-          width={1200}
-          height={750}
-          className="h-52 w-full object-cover object-top"
+          width={1400}
+          height={900}
+          className="h-full w-full object-cover object-top transition-[filter] duration-200 group-hover:brightness-75"
           src={image}
         />
-        {link && (
-          <div className="absolute inset-0 flex items-end bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent p-4 opacity-100 md:opacity-0 md:transition-opacity md:duration-200 md:group-hover:opacity-100">
-            <Link
-              href={link}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex cursor-pointer items-center gap-2 rounded-lg bg-white px-3 py-2 text-sm font-semibold text-slate-900 transition-colors duration-200 hover:bg-primary hover:text-white focus-ring"
-            >
-              Visit live site
-              <BiLinkExternal size={16} />
-            </Link>
-          </div>
+        {category && (
+          <span className="absolute left-4 top-4 rounded-full bg-black/60 px-3 py-1 font-mono text-[11px] uppercase tracking-widest text-white">
+            {category}
+          </span>
         )}
       </div>
-      <div className="flex flex-1 flex-col gap-2 p-5">
-        <h3 className="font-heading text-xl font-semibold text-slate-900 dark:text-white">
-          {name}
-        </h3>
-        <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-300">
-          {techstack}
-        </p>
+      <div className="flex items-start justify-between gap-4 p-5">
+        <div>
+          <h3 className="font-heading text-xl font-semibold tracking-tight text-slate-900 dark:text-white">
+            {name}
+          </h3>
+          <div className="mt-2 flex flex-wrap gap-2">
+            {tags.slice(0, 4).map((tag) => (
+              <span
+                key={tag}
+                className="text-xs text-slate-500 dark:text-slate-400"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+        {link && (
+          <Link
+            href={link}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`Open ${name}`}
+            className="grid h-10 w-10 shrink-0 cursor-pointer place-items-center rounded-full border border-slate-200 text-slate-700 transition-colors duration-200 hover:border-primary hover:text-primary focus-ring dark:border-white/10 dark:text-white"
+          >
+            <BiLinkExternal size={16} />
+          </Link>
+        )}
       </div>
     </motion.article>
   );

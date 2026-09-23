@@ -1,6 +1,6 @@
 import { social } from "@/types/main";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import * as Fa from "react-icons/fa";
 
 export default function Footer({
@@ -10,13 +10,34 @@ export default function Footer({
   socials: social[];
   name: string;
 }) {
+  const [time, setTime] = useState("");
+
+  useEffect(() => {
+    const tick = () =>
+      setTime(
+        new Intl.DateTimeFormat("en-GB", {
+          timeZone: "Africa/Addis_Ababa",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: false,
+        }).format(new Date())
+      );
+    tick();
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
+  }, []);
+
   return (
-    <footer className="border-t border-slate-200 bg-white dark:border-white/10 dark:bg-ink">
-      <div className="container-page flex flex-col items-center justify-between gap-4 py-8 md:flex-row">
-        <p className="text-sm text-slate-600 dark:text-slate-300">
-          © {new Date().getFullYear()} {name}. Built with care.
+    <footer className="border-t border-slate-200 dark:border-white/10">
+      <div className="container-page flex flex-col gap-4 py-8 md:flex-row md:items-center md:justify-between">
+        <p className="font-mono text-xs uppercase tracking-[0.18em] text-slate-500">
+          © {new Date().getFullYear()} {name}
         </p>
-        <div className="flex items-center gap-2">
+        <p className="font-mono text-xs uppercase tracking-[0.18em] text-slate-500">
+          Addis Ababa · {time || "--:--:--"}
+        </p>
+        <div className="flex items-center gap-1">
           {socials.map((s: social) => (
             <Link
               href={s.link}

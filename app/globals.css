@@ -6,15 +6,8 @@
   --color-primary: #1e293b;
   --color-secondary: #334155;
   --color-cta: #22c55e;
-  --color-background: #0f172a;
+  --color-background: #070b14;
   --color-text: #f8fafc;
-  --space-xs: 0.25rem;
-  --space-sm: 0.5rem;
-  --space-md: 1rem;
-  --space-lg: 1.5rem;
-  --space-xl: 2rem;
-  --space-2xl: 3rem;
-  --space-3xl: 4rem;
 }
 
 * {
@@ -33,20 +26,25 @@ html {
 }
 
 ::-webkit-scrollbar {
-  width: 0.5rem;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
+  width: 0.45rem;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #64748b;
+  background-color: #475569;
   border-radius: 999px;
 }
 
 .scroll-hide::-webkit-scrollbar {
   display: none;
+}
+
+.noise {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  opacity: 0.045;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 @layer components {
@@ -55,23 +53,36 @@ html {
   }
 
   .focus-ring {
-    @apply outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-ink;
+    @apply outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-[#070b14];
   }
 
   .glass-nav {
-    @apply border border-slate-200/80 bg-white/80 backdrop-blur-xl dark:border-white/10 dark:bg-slate-900/80;
+    @apply border border-white/10 bg-[#070b14]/70 backdrop-blur-xl dark:border-white/10;
   }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .marquee-track {
+    animation: none;
   }
 
   *,

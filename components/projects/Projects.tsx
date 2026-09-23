@@ -66,9 +66,13 @@ const Projects = ({ projectsData }: Props) => {
           ))}
         </div>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {visible.map((p: IProject & { category?: string }) => (
-            <ProjectCard key={`${p.category}-${p.name}`} {...p} />
+        <div className="mt-10 grid gap-5 md:grid-cols-2">
+          {visible.map((p: IProject & { category?: string }, index) => (
+            <ProjectCard
+              key={`${p.category}-${p.name}`}
+              {...p}
+              featured={index === 0 && category === "All"}
+            />
           ))}
         </div>
 

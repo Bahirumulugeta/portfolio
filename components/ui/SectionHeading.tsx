@@ -20,7 +20,7 @@ const SectionHeading = ({
       <p className="mb-3 font-mono text-xs uppercase tracking-[0.22em] text-primary md:text-sm">
         {index}
       </p>
-      <h2 className="font-heading text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-50 md:text-5xl">
+      <h2 className="font-heading text-3xl font-medium tracking-tight text-slate-900 dark:text-slate-50 md:text-[2.75rem] md:leading-[1.15]">
         {title}
       </h2>
       {subtitle && (

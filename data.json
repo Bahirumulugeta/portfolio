@@ -17,12 +17,12 @@
     ]
   },
   "about": {
-    "aboutImage": "https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg",
+    "aboutImage": "/cropped.jpg",
     "aboutImageCaption": "< I build stuff 🚀/>",
     "title": "Full Stack Developer",
     "about": "I build web applications with React, Vue, and Next.js using TypeScript for clean, maintainable code. On the backend I work with Node.js, Express, and NestJS across MySQL, PostgreSQL, and MongoDB. I care about fast, usable interfaces with Tailwind CSS and Material UI, and I also ship Telegram bots when a product needs an extra channel.",
     "callUrl": "tel:+251948750343",
-    "resumeUrl": "https://europa.eu/europass/eportfolio/api/eprofile/shared-profile/bahiru+mulugeta-mekonnen/f0389b3c-c458-4d36-9675-5d0d40614e1a?view=html"
+    "resumeUrl": "/Bahiru-Resume.pdf"
   },
   "socials": [
     {

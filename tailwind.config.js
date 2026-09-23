@@ -21,7 +21,7 @@ module.exports = {
           muted: "#166534",
         },
         secondary: "#334155",
-        ink: "#0F172A",
+        ink: "#070B14",
         surface: {
           light: "#FFFFFF",
           dark: "#1E293B",
