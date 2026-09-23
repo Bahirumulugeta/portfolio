@@ -1,50 +1,25 @@
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import { FastAverageColor } from "fast-average-color";
-import { skill, ISkill } from "@/types/main";
+import { ISkill } from "@/types/main";
 import { useTheme } from "next-themes";
 
 const Skill = ({ name, image }: ISkill) => {
   const { theme } = useTheme();
-  const [bgColor, setBgColor] = useState("");
-  useEffect(() => {
-    new FastAverageColor()
-      .getColorAsync(image)
-      .then((color) => {
-        const rgba = color.rgb.split(")");
-        setBgColor(rgba[0] + ",0.07)");
-      })
-      .catch((e) => {
-        console.log(e);
-      });
-  }, [image]);
+  const invert =
+    theme === "dark" &&
+    ["GitHub", "Github", "Vercel", "NextJS", "NextJs", "ExpressJS", "ExpressJs"].includes(
+      name
+    );
 
   return (
-    <div className="flex flex-col justify-center items-center gap-2">
-      <div
-        title={name}
-        style={{ backgroundColor: bgColor }}
-        className={
-          "h-20 w-20 md:h-24 md:w-24 rounded-full bg-gray-100 dark:bg-grey-800 flex items-center justify-center"
-        }
-      >
-        <Image
-          alt="skill"
-          width={100}
-          height={100}
-          className={`h-12 w-12 md:h-14 md:w-14 object-contain ${
-            theme === "dark" &&
-            (name === "GitHub" ||
-            name === "Vercel" ||
-            name === "NextJS" ||
-            name === "ExpressJS"
-              ? "invert"
-              : "invert-0")
-          }`}
-          src={image}
-        />
-      </div>
-      <p className="text-sm md:text-base">{name}</p>
+    <div className="flex items-center gap-3 rounded-2xl border border-slate-200 px-3 py-3 dark:border-white/10">
+      <Image
+        alt={`${name} logo`}
+        width={40}
+        height={40}
+        className={`h-7 w-7 object-contain ${invert ? "invert" : ""}`}
+        src={image}
+      />
+      <p className="text-sm font-medium text-slate-800 dark:text-slate-100">{name}</p>
     </div>
   );
 };

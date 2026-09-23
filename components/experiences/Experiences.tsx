@@ -1,7 +1,8 @@
 import { education, experience } from "@/types/main"
 import { useState } from "react"
-import { ViewAll } from "../projects/Projects"
+import { ViewAll } from "../ui/ViewAll"
 import SectionWrapper from "../SectionWrapper"
+import SectionHeading from "../ui/SectionHeading"
 import ExperienceCard from "./ExperienceCard"
 
 interface Props {
@@ -10,45 +11,57 @@ interface Props {
 }
 
 const Experiences = ({ experienceData, educationData }: Props) => {
-
     const [show, setShow] = useState("Experience")
     const [viewAll, setViewAll] = useState(false)
 
-    const [experiences, setExperiences] = useState([...experienceData].reverse() as experience[])
-    const [educations, setEducations] = useState([...educationData].reverse() as education[])
+    const experiences = [...experienceData].reverse()
+    const educations = [...educationData].reverse()
+    const items = show === "Experience" ? experiences : educations
+    const visible = viewAll ? items : items.slice(0, 4)
 
     return (
-        <SectionWrapper id="experience" className="min-h-screen">
-            <h2 className="text-4xl text-center">Experience</h2>
-            <div className="w-fit mx-auto mt-6 p-2 bg-white dark:bg-grey-800 rounded-md flex gap-2 items-center">
-                {['Experience', 'Education'].map((e, i) => (
-                    <button key={i} onClick={() => setShow(e)} className={`py-2 px-4 rounded-md transition-colors ${show === e ? 'bg-primary-main text-white' : 'hover:bg-gray-100 hover:dark:bg-grey-900 text-black dark:text-white'}`}>{e}</button>
-                ))
-                }
-            </div>
-            <div className="lg:container sm:mx-4 lg:mx-auto lg:w-5/6 2xl:w-3/4">
-                <div className="relative wrap overflow-hidden p-4 md:py-10 md:px-0">
-                    <div className="left-6 md:left-1/2 absolute border-opacity-20 border-gray-400 dark:border-grey-800 h-full border"></div>
+        <SectionWrapper id="experience" className="py-20 md:py-28">
+            <div className="container-page">
+                <SectionHeading
+                    index="04 — Path"
+                    title="Experience that scales from APIs to product UI."
+                    subtitle="Enterprise software, ecommerce, sports platforms, and high-traffic backends."
+                />
 
-                    {viewAll ?
-                        (show === "Experience" ? experiences : educations).map((e, i) => (
-                            // @ts-ignore
-                            <ExperienceCard key={i} {...e} index={i} />
-                        ))
-                        :
-                        (show === "Experience" ? experiences : educations).slice(0, 2).map((e, i) => (
-                            // @ts-ignore
-                            <ExperienceCard key={i} {...e} index={i} />
-                        ))
-                    }
-
+                <div className="mb-10 inline-flex rounded-xl border border-slate-200 bg-white p-1.5 dark:border-white/10 dark:bg-surface-dark" role="tablist">
+                    {['Experience', 'Education'].map((e) => (
+                        <button
+                            key={e}
+                            type="button"
+                            role="tab"
+                            aria-selected={show === e}
+                            onClick={() => {
+                                setShow(e)
+                                setViewAll(false)
+                            }}
+                            className={`cursor-pointer rounded-lg px-5 py-2.5 text-sm font-medium transition-colors duration-200 focus-ring ${show === e ? 'bg-primary text-white' : 'text-slate-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800'}`}
+                        >
+                            {e}
+                        </button>
+                    ))}
                 </div>
+
+                <div className="relative">
+                    <div className="absolute left-[11px] top-2 hidden h-[calc(100%-1rem)] w-px bg-slate-200 md:left-1/2 md:block dark:bg-white/10" />
+                    {visible.map((e, i) => (
+                        // @ts-ignore
+                        <ExperienceCard key={`${show}-${i}`} {...e} index={i} />
+                    ))}
+                </div>
+
+                {items.length > 4 && (
+                    <ViewAll
+                        scrollTo="experience"
+                        title={viewAll ? 'Show less' : 'Show more'}
+                        handleClick={() => setViewAll(!viewAll)}
+                    />
+                )}
             </div>
-
-            {(show === "Experience" ? experiences : educations).length > 2 &&
-                <ViewAll scrollTo='experience' title={viewAll ? 'Show Less' : 'Show More'} handleClick={() => setViewAll(!viewAll)} />
-            }
-
         </SectionWrapper>
     )
 }

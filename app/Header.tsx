@@ -4,100 +4,123 @@ import { useTheme } from 'next-themes'
 import Link from 'next/link'
 import { Link as ScrollLink } from 'react-scroll'
 import { FiSun, FiMoon } from 'react-icons/fi'
-import { FaNodeJs } from 'react-icons/fa'
 import { CgClose, CgMenuRight } from 'react-icons/cg'
+import ResumeButton from '@/components/ResumeButton'
+
+const navs = [
+    { id: 'home', label: 'Index' },
+    { id: 'about', label: 'About' },
+    { id: 'projects', label: 'Work' },
+    { id: 'experience', label: 'Experience' },
+    { id: 'contact', label: 'Contact' },
+]
 
 export default function Header({ logo }: { logo: string }) {
-
     const [navCollapse, setNavCollapse] = useState(true)
     const [scroll, setScroll] = useState(false)
+    const [mounted, setMounted] = useState(false)
     const { theme, setTheme } = useTheme()
+    const brand = logo.split(' ')[0]
 
     useEffect(() => {
-        const updateScroll = () => {
-            window.scrollY >= 90 ? setScroll(true) : setScroll(false)
-        }
-        window.addEventListener('scroll', updateScroll)
+        setMounted(true)
+        const updateScroll = () => setScroll(window.scrollY >= 24)
+        updateScroll()
+        window.addEventListener('scroll', updateScroll, { passive: true })
+        return () => window.removeEventListener('scroll', updateScroll)
     }, [])
 
-
-    const navs = ['home', 'about', 'projects', 'experience', 'contact']
+    useEffect(() => {
+        document.body.style.overflow = navCollapse ? '' : 'hidden'
+        return () => {
+            document.body.style.overflow = ''
+        }
+    }, [navCollapse])
 
     return (
-        <header className={`backdrop-filter backdrop-blur-lg ${scroll ? 'border-b bg-white bg-opacity-40' : 'border-b-0'} dark:bg-grey-900 dark:bg-opacity-40 border-gray-200 dark:border-b-0 z-30 min-w-full flex flex-col fixed`}>
-            <nav className='lg:w-11/12 2xl:w-4/5 w-full md:px-6 2xl:px-0 mx-auto py-4 hidden sm:flex items-center justify-between'>
-
-                <Link href={'/'} className='2xl:ml-6 hover:text-primary-hover hover:dark:text-primary-main transition-colors duration-300'>
-                    {logo === 'Jigar Sable' ? <FaNodeJs size={28} /> : <span className='text-lg font-medium'>{logo.split(' ')[0]}</span>}
+        <header className="pointer-events-none fixed inset-x-0 top-0 z-40 p-3 sm:p-4">
+            <nav className={`pointer-events-auto mx-auto flex max-w-6xl items-center justify-between rounded-full px-4 py-2.5 transition-all duration-200 sm:px-5 ${scroll ? 'glass-nav shadow-lift' : ''}`}>
+                <Link href="/" className="font-heading text-base font-semibold tracking-tight text-slate-900 transition-colors duration-200 hover:text-primary focus-ring dark:text-white">
+                    {brand}
+                    <span className="text-primary">*</span>
                 </Link>
 
-                <ul className='flex items-center gap-8'>
-                    {navs.map((e, i) => (
-                        <li key={i}>
+                <ul className="hidden items-center gap-1 lg:flex">
+                    {navs.map((item) => (
+                        <li key={item.id}>
                             <ScrollLink
-                                className='hover:text-primary-hover hover:dark:text-primary-main transition-colors capitalize cursor-pointer'
-                                to={e}
-                                offset={-60}
+                                className="cursor-pointer rounded-full px-3 py-2 text-[13px] font-medium text-slate-500 transition-colors duration-200 hover:text-slate-900 focus-ring dark:text-slate-400 dark:hover:text-white"
+                                to={item.id}
+                                offset={-90}
+                                spy={true}
                                 smooth={true}
-                                duration={500}
+                                duration={400}
                                 isDynamic={true}
+                                activeClass="text-primary dark:text-primary"
                             >
-                                {e}
+                                {item.label}
                             </ScrollLink>
                         </li>
                     ))}
-                    <span
-                        onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                        className='hover:bg-gray-100 hover:dark:bg-primary-hover p-1.5 rounded-full cursor-pointer transition-colors'>
-                        {theme === 'dark' ? <FiSun /> : <FiMoon />}
-                    </span>
                 </ul>
-            </nav>
 
-            <nav className='p-4 flex sm:hidden items-center justify-between'>
-                {logo === 'Jigar Sable' ? <FaNodeJs size={28} /> : <span className='text-lg font-medium'>{logo.split(' ')[0]}</span>}
-                <div className='flex items-center gap-4'>
-                    <span
+                <div className="flex items-center gap-2">
+                    <button
+                        type="button"
+                        aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
                         onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                        className='bg-gray-100 dark:bg-primary-hover p-1.5 rounded-full cursor-pointer transition-colors'>
-                        {theme === 'dark' ? <FiSun /> : <FiMoon />}
-                    </span>
-                    <CgMenuRight size={20} onClick={() => setNavCollapse(false)} />
+                        className="grid h-10 w-10 cursor-pointer place-items-center rounded-full text-slate-700 transition-colors duration-200 hover:text-primary focus-ring dark:text-slate-200"
+                    >
+                        {mounted && theme === 'dark' ? <FiSun size={16} /> : <FiMoon size={16} />}
+                    </button>
+                    <div className="hidden sm:block">
+                        <ResumeButton className="!py-2 !px-4 text-xs" label="CV" />
+                    </div>
+                    <button
+                        type="button"
+                        aria-label="Open menu"
+                        aria-expanded={!navCollapse}
+                        onClick={() => setNavCollapse(false)}
+                        className="grid h-10 w-10 cursor-pointer place-items-center rounded-full text-slate-800 focus-ring lg:hidden dark:text-white"
+                    >
+                        <CgMenuRight size={20} />
+                    </button>
                 </div>
             </nav>
 
-            <div className={`flex min-h-screen w-screen absolute md:hidden top-0 ${!navCollapse ? 'right-0' : 'right-[-100%]'} bottom-0 z-50 ease-in duration-300`}>
-                <div className="w-1/4" onClick={() => setNavCollapse(true)}></div>
-
-                <div className="flex flex-col p-4 gap-5 bg-gray-100/95 backdrop-filter backdrop-blur-sm dark:bg-grey-900/95 w-3/4">
-                    <CgClose className='self-end my-2' size={20} onClick={() => setNavCollapse(true)} />
-
-                    {navs.slice(0, 4).map((e) => (
-                        <ScrollLink
-                            key={e}
-                            className='hover:text-primary-main py-1.5 px-4 rounded transition-colors capitalize cursor-pointer'
-                            to={e}
-                            offset={-60}
-                            smooth={true}
-                            duration={500}
-                            isDynamic={true}
-                            onClick={() => setNavCollapse(true)}
-                        >
-                            {e}
-                        </ScrollLink>
-                    ))}
-                    <ScrollLink
-                        to='contact'
-                        offset={-60}
-                        smooth={true}
-                        duration={500}
+            {!navCollapse && (
+                <div className="pointer-events-auto fixed inset-0 z-50 lg:hidden">
+                    <button
+                        type="button"
+                        aria-label="Close menu"
+                        className="absolute inset-0 cursor-pointer bg-slate-950/70"
                         onClick={() => setNavCollapse(true)}
-                        className='px-6 py-1.5 rounded-md bg-primary-main hover:bg-primary-hover text-white text-center'>
-                        Contact
-                    </ScrollLink>
+                    />
+                    <div className="absolute right-3 top-3 flex w-[min(100%-1.5rem,20rem)] flex-col gap-1 rounded-3xl border border-white/10 bg-ink p-4">
+                        <button
+                            type="button"
+                            aria-label="Close menu"
+                            onClick={() => setNavCollapse(true)}
+                            className="mb-2 ml-auto grid h-10 w-10 cursor-pointer place-items-center rounded-full focus-ring"
+                        >
+                            <CgClose size={18} />
+                        </button>
+                        {navs.map((item) => (
+                            <ScrollLink
+                                key={item.id}
+                                className="cursor-pointer rounded-xl px-4 py-3 text-base font-medium text-slate-100 transition-colors duration-200 hover:bg-white/5 focus-ring"
+                                to={item.id}
+                                offset={-90}
+                                smooth={true}
+                                duration={400}
+                                onClick={() => setNavCollapse(true)}
+                            >
+                                {item.label}
+                            </ScrollLink>
+                        ))}
+                    </div>
                 </div>
-            </div>
-
+            )}
         </header>
     )
 }

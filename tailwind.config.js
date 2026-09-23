@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: 'class',
+  darkMode: "class",
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -8,27 +8,43 @@ module.exports = {
   ],
   theme: {
     extend: {
-      // fontFamily: {
-      //   poppins: ['var(--font-poppins)']
-      // },
+      fontFamily: {
+        heading: ["var(--font-heading)", "sans-serif"],
+        body: ["var(--font-body)", "sans-serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "monospace"],
+      },
       colors: {
         primary: {
-          main:'#1680A4',
-          hover:"#228BAC"
+          DEFAULT: "#22C55E",
+          main: "#22C55E",
+          hover: "#16A34A",
+          muted: "#166534",
         },
-        secondary: '#38c172',
+        secondary: "#334155",
+        ink: "#070B14",
+        surface: {
+          light: "#FFFFFF",
+          dark: "#1E293B",
+        },
         grey: {
-          800: '#18141c',
-          900: '#120f16'
+          800: "#1E293B",
+          900: "#0F172A",
         },
-        yellow: {
-          400: '#FEDE00',
-        }
+      },
+      maxWidth: {
+        content: "72rem",
+      },
+      boxShadow: {
+        lift: "0 10px 15px rgba(15, 23, 42, 0.12)",
+        glow: "0 0 40px rgba(34, 197, 94, 0.18)",
       },
       backgroundImage: {
         heropattern: "url(/herobgc.jpg)",
-      }
+      },
+      transitionDuration: {
+        DEFAULT: "200ms",
+      },
     },
-    plugins: [],
-  }
-}
+  },
+  plugins: [],
+};

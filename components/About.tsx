@@ -1,41 +1,82 @@
-import Image from "next/image"
+import Image from "next/image";
 import { about } from "@/types/main";
 import Link from "next/link";
 import SectionWrapper from "./SectionWrapper";
-import { BiLinkExternal } from "react-icons/bi";
+import SectionHeading from "./ui/SectionHeading";
+import ResumeButton from "./ResumeButton";
+import { HiPhone } from "react-icons/hi";
 
 interface Props {
-    aboutData: about,
-    name: string
+  aboutData: about;
+  name: string;
 }
+
+const stats = [
+  { value: "05+", label: "Years" },
+  { value: "10+", label: "Products" },
+  { value: "08", label: "Teams" },
+];
 
 const About = ({ aboutData, name }: Props) => {
+  const { title, about, callUrl, aboutImage } = aboutData;
 
-    const { aboutImage, aboutImageCaption, title, about, resumeUrl, callUrl } = aboutData
-
-    return (
-        <SectionWrapper id="about" className="min-h-[90vh] pt-12 bg-gradient-to-b from-white to-gray-100/20 dark:from-grey-900 dark:to-grey-900">
-            <h2 className="text-4xl text-center">About Me</h2>
-
-            <div className="w-full lg:w-11/12 2xl:w-4/5 mt-2 lg:mt-20 mx-auto flex flex-col md:gap-4 lg:flex-row justify-between items-center">
-                <div className="p-3 w-56 self-start md:w-2/5 lg:w-72 bg-white dark:bg-grey-800 flex flex-col gap-2 items-center rounded-2xl mx-auto lg:mx-16 hover:-translate-y-2 transition-transform duration-300">
-                    <Image alt="profile" width={1000} height={1000} loading={'lazy'} className="w-full h-60 md:h-80 rounded-2xl object-cover grayscale hover:grayscale-0 transition-all bg-violet-100" src={aboutImage} />
-                </div>
-
-                <div className="flex-1 text-left mx-4 mt-4 md:mt-0 md:mx-0 md:p-6">
-                    <div className="flex flex-col gap-2.5">
-                        <p className="text-3xl font-semibold">{name}</p>
-                        <p className='text-primary-main w-fit rounded py-1 px-2 text-sm dark:text-primary-hover bg-violet-50 dark:bg-violet-900/10'>{title}</p>
-                        <p className="text-sm md:text-base my-2 text-gray-600 dark:text-gray-300">{about}</p>
-                        <div className="flex items-center gap-4 md:mt-4">
-                            {resumeUrl.trim() && <Link href={resumeUrl} target="_blank" className="text-sm md:text-base bg-primary-main dark:bg-primary-hover text-white w-fit rounded-md py-2 px-6 hover:shadow-xl transition-shadow">Resume</Link>}
-                            {callUrl.trim() && <Link href={callUrl} target="_blank" className="text-primary-main flex items-center gap-1 hover:bg-violet-50 hover:dark:bg-violet-900/10 shadow-sm shadow-primary-main py-2 px-4 transition-colors rounded-md">Call Now <BiLinkExternal /> </Link>}
-                        </div>
-                    </div>
-                </div>
+  return (
+    <SectionWrapper id="about" className="py-20 md:py-28">
+      <div className="container-page">
+        <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+          <div>
+            <SectionHeading
+              index="01 — About"
+              title="I turn messy product ideas into systems people actually ship on."
+            />
+            <p className="max-w-2xl text-base leading-relaxed text-slate-600 dark:text-slate-300 md:text-lg">
+              {about}
+            </p>
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              <ResumeButton />
+              {callUrl.trim() && (
+                <Link
+                  href={callUrl}
+                  className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-900 transition-colors duration-200 hover:border-primary hover:text-primary focus-ring dark:border-white/15 dark:text-white"
+                >
+                  <HiPhone className="h-4 w-4" />
+                  Call
+                </Link>
+              )}
             </div>
-        </SectionWrapper>
-    )
-}
+          </div>
 
-export default About
+          <div className="grid gap-4">
+            <div className="overflow-hidden rounded-3xl border border-slate-200 dark:border-white/10">
+              <Image
+                alt={`${name} illustration`}
+                width={1200}
+                height={900}
+                className="h-72 w-full object-cover object-center"
+                src={aboutImage}
+              />
+            </div>
+            <div className="grid grid-cols-3 overflow-hidden rounded-3xl border border-slate-200 dark:border-white/10">
+              {stats.map((stat, i) => (
+                <div
+                  key={stat.label}
+                  className={`bg-white p-5 dark:bg-surface-dark ${i > 0 ? "border-l border-slate-200 dark:border-white/10" : ""}`}
+                >
+                  <p className="font-heading text-3xl tracking-tight">{stat.value}</p>
+                  <p className="mt-1 text-xs uppercase tracking-[0.18em] text-slate-500">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-slate-500">
+              {title} · Convex Technologies
+            </p>
+          </div>
+        </div>
+      </div>
+    </SectionWrapper>
+  );
+};
+
+export default About;
