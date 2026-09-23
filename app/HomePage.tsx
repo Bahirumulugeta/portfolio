@@ -8,6 +8,7 @@ import Socials from "@/components/Socials";
 import Experiences from "@/components/experiences/Experiences";
 import Contact from "@/components/Contact";
 import VisitTracker from "@/components/VisitTracker";
+import SeoJsonLd from "@/components/SeoJsonLd";
 import Header from "./Header";
 import Footer from "./Footer";
 
@@ -19,6 +20,7 @@ const HomePage = ({ data }: Props) => {
     return (
         <>
             <VisitTracker />
+            <SeoJsonLd />
             <Header logo={data.main.name} />
             <main>
                 <Hero mainData={data.main} />
