@@ -17,7 +17,7 @@
     ]
   },
   "about": {
-    "aboutImage": "/cropped.jpg",
+    "aboutImage": "/about-engineer.png",
     "aboutImageCaption": "< I build stuff 🚀/>",
     "title": "Senior Full-Stack Software Engineer",
     "about": "Senior full-stack engineer with 5+ years building scalable web applications in React, Next.js, and Node.js. I design performant APIs, ship responsive interfaces, and deploy production systems with Docker and CI/CD. I care about clean TypeScript and working with product teams to deliver software that holds up in production.",

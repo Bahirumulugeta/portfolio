@@ -9,7 +9,6 @@ import { HiPhone } from "react-icons/hi";
 interface Props {
   aboutData: about;
   name: string;
-  portrait: string;
 }
 
 const stats = [
@@ -18,8 +17,8 @@ const stats = [
   { value: "08", label: "Teams" },
 ];
 
-const About = ({ aboutData, name, portrait }: Props) => {
-  const { title, about, callUrl } = aboutData;
+const About = ({ aboutData, name }: Props) => {
+  const { title, about, callUrl, aboutImage } = aboutData;
 
   return (
     <SectionWrapper id="about" className="py-20 md:py-28">
@@ -50,11 +49,11 @@ const About = ({ aboutData, name, portrait }: Props) => {
           <div className="grid gap-4">
             <div className="overflow-hidden rounded-3xl border border-slate-200 dark:border-white/10">
               <Image
-                alt={`${name} portrait`}
-                width={800}
+                alt={`${name} illustration`}
+                width={1200}
                 height={900}
-                className="h-72 w-full object-cover"
-                src={portrait}
+                className="h-72 w-full object-cover object-center"
+                src={aboutImage}
               />
             </div>
             <div className="grid grid-cols-3 overflow-hidden rounded-3xl border border-slate-200 dark:border-white/10">
