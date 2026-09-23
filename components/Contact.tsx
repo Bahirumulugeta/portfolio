@@ -61,7 +61,7 @@ const Contact = () => {
         <div className="grid gap-10 rounded-3xl border border-slate-200 bg-white p-6 dark:border-white/10 dark:bg-surface-dark md:grid-cols-2 md:p-10">
           <div>
             <SectionHeading
-              index="06 — Contact"
+              index="05 — Contact"
               title="Let’s build the next product together."
               subtitle="I reply to thoughtful briefs about fullstack web work, Telegram bots, and product engineering."
             />

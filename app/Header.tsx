@@ -12,7 +12,6 @@ const navs = [
     { id: 'about', label: 'About' },
     { id: 'projects', label: 'Work' },
     { id: 'experience', label: 'Experience' },
-    { id: 'resume', label: 'Resume' },
     { id: 'contact', label: 'Contact' },
 ]
 

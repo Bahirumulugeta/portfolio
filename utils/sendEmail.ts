@@ -1,4 +1,4 @@
-import nodemailer from "nodemailer";
+import nodemailer, { SendMailOptions } from "nodemailer";
 import SMTPTransport from "nodemailer/lib/smtp-transport";
 import { EmailTemplate, loadTemplate, templates } from "./emailTemplates";
 
@@ -27,7 +27,7 @@ export const sendEmail = async (options: {
     },
   } as SMTPTransport.Options);
 
-  const mailOptions: nodemailer.SendMailOptions = {
+  const mailOptions: SendMailOptions = {
     from: `Bahiru Mulugeta <${process.env.SMTP_FROM || process.env.SMTP_USER}>`,
     to: options.to,
     subject: options.subject,

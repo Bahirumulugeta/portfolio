@@ -9,18 +9,30 @@ interface Props {
   projectsData: project[];
 }
 
+const MERN = "MERN Stack";
+
 const Projects = ({ projectsData }: Props) => {
-  const categories = ["All", ...projectsData.map((s) => s.category)];
+  const otherCategories = projectsData
+    .map((s) => s.category)
+    .filter((c) => c !== MERN);
+  const categories = [
+    "All",
+    ...(projectsData.some((s) => s.category === MERN) ? [MERN] : []),
+    ...otherCategories,
+  ];
   const [category, setCategory] = useState("All");
   const [viewAll, setViewAll] = useState(false);
 
-  const allProjects = useMemo(
-    () =>
-      projectsData.flatMap((group) =>
-        group.projects.map((item) => ({ ...item, category: group.category }))
-      ),
-    [projectsData]
-  );
+  const allProjects = useMemo(() => {
+    const flat = projectsData.flatMap((group) =>
+      group.projects.map((item) => ({ ...item, category: group.category }))
+    );
+    return [...flat].sort((a, b) => {
+      if (a.category === MERN && b.category !== MERN) return -1;
+      if (b.category === MERN && a.category !== MERN) return 1;
+      return 0;
+    });
+  }, [projectsData]);
 
   const filtered =
     category === "All"

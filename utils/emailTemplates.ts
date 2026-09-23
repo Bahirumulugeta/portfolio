@@ -51,7 +51,7 @@ export const loadTemplate = (
   template: EmailTemplate,
   templateData: Record<string, string> = {}
 ) => {
-  let html = templates[template];
+  let html: string = templates[template];
   Object.entries(templateData).forEach(([key, value]) => {
     html = html.replace(new RegExp(`{{${key}}}`, "g"), value);
   });

@@ -6,7 +6,6 @@ import Skills from "@/components/skills/Skills";
 import Projects from "@/components/projects/Projects";
 import Socials from "@/components/Socials";
 import Experiences from "@/components/experiences/Experiences";
-import Resume from "@/components/Resume";
 import Contact from "@/components/Contact";
 import VisitTracker from "@/components/VisitTracker";
 import Header from "./Header";
@@ -28,7 +27,6 @@ const HomePage = ({ data }: Props) => {
                 <Skills skillData={data.skills} />
                 <Projects projectsData={data.projects} />
                 <Experiences experienceData={data.experiences} educationData={data.educations} />
-                <Resume />
                 <Contact />
             </main>
             <Footer socials={data.socials} name={data.main.name} />

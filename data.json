@@ -19,8 +19,8 @@
   "about": {
     "aboutImage": "/cropped.jpg",
     "aboutImageCaption": "< I build stuff 🚀/>",
-    "title": "Full Stack Developer",
-    "about": "I build web applications with React, Vue, and Next.js using TypeScript for clean, maintainable code. On the backend I work with Node.js, Express, and NestJS across MySQL, PostgreSQL, and MongoDB. I care about fast, usable interfaces with Tailwind CSS and Material UI, and I also ship Telegram bots when a product needs an extra channel.",
+    "title": "Senior Full-Stack Software Engineer",
+    "about": "Senior full-stack engineer with 5+ years building scalable web applications in React, Next.js, and Node.js. I design performant APIs, ship responsive interfaces, and deploy production systems with Docker and CI/CD. I care about clean TypeScript and working with product teams to deliver software that holds up in production.",
     "callUrl": "tel:+251948750343",
     "resumeUrl": "/Bahiru-Resume.pdf"
   },
@@ -153,19 +153,37 @@
   ],
   "projects": [
     {
-      "category": "Telegram Bot",
+      "category": "MERN Stack",
       "projects": [
         {
-          "name": "Awakilo",
-          "image": "/bot.webp",
-          "techstack": "Telegraf, Node.js",
-          "link": "https://t.me/awakiloTelegramBot"
+          "name": "Mula Sport",
+          "image": "https://res.cloudinary.com/dsvjljeyr/image/upload/v1754591783/portfolio/Screenshot_2025-08-07_at_9.21.06_at_night_ocn294.png",
+          "techstack": "React.js, Next.js, Node.js, Tailwind CSS",
+          "link": "https://www.mulasport.com/"
         },
         {
-          "name": "Bishangari Booking bot",
-          "image": "/bot.webp",
-          "techstack": "Php",
-          "link": "https://t.me/bishangari_booking_bot"
+          "name": "Peoplelearn",
+          "image": "https://res.cloudinary.com/dsvjljeyr/image/upload/v1754591734/portfolio/Screenshot_2025-08-07_at_9.17.35_at_night_snz5pp.png",
+          "techstack": "Next.js, Tailwind CSS, Node.js, Express.js, TypeScript",
+          "link": "https://peoplelearn.io/"
+        },
+        {
+          "name": "Taza House",
+          "image": "https://res.cloudinary.com/dsvjljeyr/image/upload/v1713793699/portfolio/tazahouse_gz3fqo.png",
+          "techstack": "Next.js, Tailwind CSS, TypeScript, Node.js, Express.js",
+          "link": "https://tazahouse.com"
+        },
+        {
+          "name": "Awakilo",
+          "image": "https://res.cloudinary.com/dsvjljeyr/image/upload/v1713792656/portfolio/awakilo_zdifyi.png",
+          "techstack": "React.js, Tailwind CSS, Node.js, Express.js",
+          "link": "https://awakilo.com"
+        },
+        {
+          "name": "Aaron Habesha",
+          "image": "/aaronhabesha.PNG",
+          "techstack": "React.js, Tailwind CSS, Node.js, Express.js",
+          "link": "https://aaronhabesh.com"
         }
       ]
     },
@@ -175,7 +193,7 @@
         {
           "name": "Ashewa",
           "image": "/ashewa.PNG",
-          "techstack": "Nuxt, Tailwind Css",
+          "techstack": "Nuxt, Tailwind CSS",
           "link": "https://ashewa.com"
         },
         {
@@ -192,38 +210,19 @@
       ]
     },
     {
-      "category": "MERN Stack",
+      "category": "Telegram Bot",
       "projects": [
         {
-          "name": "Peoplelearn",
-          "image": "https://res.cloudinary.com/dsvjljeyr/image/upload/v1754591734/portfolio/Screenshot_2025-08-07_at_9.17.35_at_night_snz5pp.png",
-          "techstack": "Next.js, Tailwind Css, Node.js, Express.js, Typescript",
-          "link": "https://peoplelearn.io/"
-        },
-        {
-          "name": "Hulu Sport",
-          "image": "https://res.cloudinary.com/dsvjljeyr/image/upload/v1754591783/portfolio/Screenshot_2025-08-07_at_9.21.06_at_night_ocn294.png",
-          "techstack": "React.js, Tailwind Css, Django",
-          "link": "https://hulusport.et/"
-        },
-        {
-          "name": "Taza House",
-          "image": "https://res.cloudinary.com/dsvjljeyr/image/upload/v1713793699/portfolio/tazahouse_gz3fqo.png",
-          "techstack": "Next.js, Tailwind Css, Typescript, Node.js, Express.js",
-          "link": "https://tazahouse.com"
-        },
-        {
           "name": "Awakilo",
-          "image": "https://res.cloudinary.com/dsvjljeyr/image/upload/v1713792656/portfolio/awakilo_zdifyi.png",
-          "techstack": "React.js, Tailwind Css, Node.js, Express.js",
-          "link": "https://awakilo.com"
+          "image": "/bot.webp",
+          "techstack": "Telegraf, Node.js",
+          "link": "https://t.me/awakiloTelegramBot"
         },
-
         {
-          "name": "Aaron Habesha",
-          "image": "/aaronhabesha.PNG",
-          "techstack": "React.js, Tailwind Css, Node.js, Express.js",
-          "link": "https://aaronhabesh.com"
+          "name": "Bishangari Booking bot",
+          "image": "/bot.webp",
+          "techstack": "Php",
+          "link": "https://t.me/bishangari_booking_bot"
         }
       ]
     }
@@ -231,92 +230,83 @@
   "educations": [
     {
       "institute": "Addis Ababa Science and Technology University (AASTU)",
-      "degree": "Bachelor's degree",
+      "degree": "Bachelor's degree in Software Engineering",
       "duration": "2017 - 2021",
-      "desc": ["Pursuing Software Engineering course"]
+      "desc": ["GPA 3.67"]
     }
   ],
   "experiences": [
     {
-      "company": "Relief business Network ",
-      "position": "Web Developer",
-      "duration": "Jul 2021 - Jan 2022",
+      "company": "Relief Business Network",
+      "position": "Full-Stack Developer",
+      "duration": "Jul 2021 - Mar 2023",
       "desc": [
-        "Designing, developing, debugging, testing, and maintaining web based apps.",
-        "Skills: Vue.js · Node.js · MongoDB · Express.js ·  REST APIs"
+        "Developed a job portal and bidding platform using the MEVN stack.",
+        "Built frontend components with Vue.js and integrated backend APIs.",
+        "Designed database schemas and implemented core application features."
       ]
     },
     {
-      "company": "Gebeta",
-      "position": "Web Developer",
-      "duration": "Apr 2022 - Mar 2023",
+      "company": "CrossRoads Agricultural Solutions PLC",
+      "position": "Full-Stack Developer",
+      "duration": "Feb 2022 - Jan 2023",
       "desc": [
-        "Responsible for developing the system",
-        "Skills: Vue.js · Node.js · PostgreSQL · Express.js "
-      ]
-    },
-    {
-      "company": "Crossroads Tech Solutions",
-      "position": "Full-stack Developer",
-      "duration": "Feb 2022 - Jun 2023",
-      "desc": [
-        "Participating in the end-to-end development process of the company's project.",
-        "Creating endpoints (Api) for the front-end developers.",
-        "Responsible for helping front-end developers about connecting to endpoints made by the back-end developers.",
-        "Skills: React.js · Vue.js · PostgreSQL · Node.js · Vuex · Tailwind CSS · MongoDB · Redux.js · Express.js"
+        "Participated in the end-to-end development process.",
+        "Created API endpoints for frontend developers.",
+        "Assisted frontend developers with API connections."
       ]
     },
     {
       "company": "Kemer Habesha",
-      "position": "Back-end Developer",
+      "position": "Backend Engineer",
       "duration": "Oct 2022 - Sep 2023",
       "desc": [
-        "Responsible for creating an API",
-        "Writing server-side code with Node.js to handle requests and process data.",
-        "Designing and optimizing databases, writing SQL queries, and interacting with database systems like  PostgreSQL, or MongoDB",
-        "Skills: TypeScript · PostgreSQL · Node.js · MongoDB · Express.js"
+        "Developed and maintained RESTful APIs supporting frontend applications.",
+        "Built backend services using Node.js and modern frameworks.",
+        "Optimized database queries and improved backend performance."
       ]
     },
     {
       "company": "Kifiya Financial Technology PLC",
-      "position": "Senior Software Engineer",
+      "position": "Senior Frontend Developer",
       "duration": "Jul 2023 - Jan 2024",
       "desc": [
-        "Creating and building user friendly and interactive designs using React.js",
-        "Writing a clean and easily maintainable code",
-        "Skills:  React.js · TypeScript"
+        "Implemented pixel-perfect websites for in-house management and customer systems.",
+        "Wrote clean, maintainable, and well-structured code.",
+        "Gained experience in implementation and documentation."
       ]
     },
     {
-      "company": "Ashewa Technologies",
-      "position": "Full stack Developer",
-      "duration": "Dec 2023 - January 2025",
+      "company": "Ashewa Technology Solution S.C",
+      "position": "Senior Full-Stack Developer",
+      "duration": "Dec 2023 - Dec 2024",
       "desc": [
-        "Handled UI and API-related tasks for the e-commerce system (ashewa.com, internal system, seller platforms.",
-        "Worked as a backend developer for the Ashewa delivery system integrated with delivery app and driver platforms.",
-        "Creating a high-quality and robust system",
-        "Skills: React.js · TypeScript · NestJS"
+        "Developed UI features for Ashewa’s e-commerce ecosystem, including customer, seller, and internal platforms.",
+        "Integrated frontend components with backend APIs and optimized performance.",
+        "Contributed to backend services for the Ashewa delivery platform.",
+        "Implemented features such as SSO and advanced search for a platform serving 50,000+ users."
       ]
     },
     {
-      "company": "ConDigital",
-      "position": "Software Engineer",
-      "duration": "Aug 2023 - present",
+      "company": "Condigital",
+      "position": "Full-Stack Developer",
+      "duration": "Aug 2023 - Dec 2025",
       "desc": [
-        "Responsible for developing enterprise software.",
-        "Collaborating with other team members and developing high-quality software.",
-        "Creating a high-quality and robust system",
-        "Skills: React.js · TypeScript · NestJS"
+        "Contributed to the development of an ERP system using React and Node.js.",
+        "Integrated third-party APIs (Strapi CMS) and improved system performance.",
+        "Implemented pixel-perfect UI components from Figma designs.",
+        "Improved application maintainability through clean architecture and TypeScript."
       ]
     },
     {
       "company": "Convex Technologies",
-      "position": "Software Engineer",
-      "duration": "January 2025 - present",
+      "position": "Senior Full-Stack Developer",
+      "duration": "Jan 2025 - Present",
       "desc": [
-        "Working on an interactive sports betting platform",
-        "Designing and delivering a casino games for the Ethiopian market",
-        "Skills: React.js Tailwind css, Microservice, redis..."
+        "Developed and maintained a large-scale sports betting platform using React, Next.js, and Node.js.",
+        "Built scalable APIs and optimized backend performance for high-traffic betting events.",
+        "Implemented responsive UI components, improving user engagement and performance.",
+        "Collaborated with cross-functional teams to deliver casino games for African markets."
       ]
     }
   ]
