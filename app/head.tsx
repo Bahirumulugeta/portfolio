@@ -18,6 +18,8 @@ export default function Head() {
       <meta name="application-name" content="Bahiru Mulugeta - Full Stack Developer" />
       <meta name="apple-mobile-web-app-title" content="Bahiru Mulugeta - Full Stack Developer" />
       <link rel="icon" href="/favicon.ico" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <title>Bahiru Mulugeta - Full Stack Developer</title>
     </>
   )

@@ -1,26 +1,7 @@
 'use client';
 import './globals.css'
-import { Archivo, Space_Grotesk, JetBrains_Mono } from '@next/font/google'
 import { ThemeProvider } from 'next-themes'
 import { Analytics } from '@vercel/analytics/react';
-
-const heading = Space_Grotesk({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-heading',
-})
-
-const body = Archivo({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-body',
-})
-
-const mono = JetBrains_Mono({
-  subsets: ['latin'],
-  weight: ['400', '500', '600'],
-  variable: '--font-mono',
-})
 
 export default function RootLayout({
   children,
@@ -31,7 +12,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head />
       <ThemeProvider attribute='class' defaultTheme='dark' enableSystem={false}>
-        <body className={`${heading.variable} ${body.variable} ${mono.variable} font-body bg-slate-50 text-slate-900 antialiased overflow-x-hidden dark:bg-ink dark:text-slate-50`}>
+        <body className="font-body bg-slate-50 text-slate-900 antialiased overflow-x-hidden dark:bg-ink dark:text-slate-50">
           <div className="noise" aria-hidden />
           <a
             href="#home"
